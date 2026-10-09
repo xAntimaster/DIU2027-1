@@ -2,6 +2,7 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Objetos perdidos CU</title>
@@ -27,7 +28,7 @@
 
                 <li><a href="#buscar">[ Buscar Objeto ]</a></li>
 
-                <li><a href="ultimos-registros">[ últimos Registros ]</a></li>
+                <li><a href="#ultimos-registros">[ últimos Registros ]</a></li>
 
                 <li><a href="#reportar">[ Levantar Reporte ]</a></li>
 
@@ -38,4 +39,104 @@
             </ul>
         </nav>
     </header>
+
+    <main>
+
+        <!-- ================================ Primera sección: Buscador ================================-->
+        <section id="buscar">
+
+            <h2> >  Busqueda de objetos registrados </h2>
+
+            <p>Consulta la base de datos de objetos reportados por la comunidad universitaria.</p>
+
+            <div class="search-box">
+
+                <label>Buscar Objeto</label>
+                
+                <input type="text" placeholder="Ej. mochila, calculadora, termo...">
+
+                <button type="submit"> Ejecutar Búsqueda </button>
+            </div>
+        </section>
+
+        <!-- ================================ Segunda sección: Últimos registros ================================-->
+
+         <!-- SECCIÓN 2: últimos registros -->
+        <section id="ultimos-registros">
+
+            <h2> > Últimos registros </h2>
+            
+            <div>
+                <!-- Objeto 1 (Extraviado) -->
+                <article >
+
+                    <!--Primera imagen anexada-->
+                    <figure>
+                        <img src="imagenes/" alt="Audífonos negros con blanco" width="300" onerror="this.onerror=null; this.src='https://placehold.co/300x200/0a0414/bf00ff?text=IMG_AUDIFONOS.JPG';">
+                    </figure>
+
+
+                    <div > > REGISTRO 001 </div>
+                    
+                    <p><strong>Objeto:</strong> Audífonos</p>
+                    <p><strong>Estatus:</strong> <span>EXTRAVIADO</span></p>
+                    <p><strong>Encontrado/Perdido en:</strong>Las Islas</p>
+                    <p><strong>Características:</strong> Tiene una estampa de conejito en la parte de abajo.</p>
+                    
+                    <!--Botón que simula ver más detalles del objeto-->
+                    <button type="submit">[ VER DETALLES ]</button>
+
+                </article>
+
+                <!-- Objeto 2 (Encontrado) -->
+                <article class="card found">
+
+                    <!--Primera imagen anexada-->
+                    <figure>
+                        <img src="imagenes/" alt="Cartela de tela" width="300" onerror="this.onerror=null; this.src='https://placehold.co/300x200/0a0414/bf00ff?text=IMG_CARTERA.JPG';">
+                    </figure>
+
+                    <div > > REGISTRO 002 </div>
+
+                    <p><strong>Objeto:</strong> Cartera</p>
+                    <p><strong>Estatus:</strong> <span class="status-found">ENCONTRADO</span></p>
+                    <p><strong>Encontrado/Perdido en:</strong> Biblioteca Central</p>
+                    <p><strong>Características:</strong> Tiene todas las credenciales y dinero intacto.</p>
+                    
+                    <!--Botón que simula ver más detalles del objeto-->
+                    <button type="submit">[ VER DETALLES ]</button>
+
+                </article>
+
+                <!-- Objeto 3 (Extraviado) -->
+                <article>
+
+                    <!--Primera imagen anexada-->
+                    <figure>
+                        <img src="imagenes/" alt="Termo color verde" width="300" onerror="this.onerror=null; this.src='https://placehold.co/300x200/0a0414/bf00ff?text=IMG_TERMO.JPG';">
+                    </figure>
+
+                    <div> > REGISTRO 003 </div>
+
+                    <p><strong>Objeto:</strong> Termo</p>
+                    <p><strong>Estatus:</strong> <span class="status-lost">EXTRAVIADO</span></p>
+                    <p><strong>Encontrado/Perdido en:</strong> Campos de practica</p>
+                    <p><strong>Características:</strong> Tiene un golpe de lado izquierdo.</p>
+
+                    <!--Botón que simula ver más detalles del objeto-->
+                    <button class="btn">[ VER DETALLES ]</button>
+
+                </article>
+            </div>
+            
+            <!--Botón de "ver más"-->
+            <div>
+                <button type="submit"> > Cargar más registros </button>
+            </div>
+        </section>
+
+        <!-- ================================ Tercera sección: Subir reporte ================================-->
+
+
+    </main>
 </body>
