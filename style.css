@@ -1,0 +1,247 @@
+/* ==========================================================================
+   VARIABLES DE COLOR (Custom Properties)
+   Esto nos permite guardar colores y reusarlos. Si quieres cambiar el tono
+   del sitio, solo cambias los valores aquí y se actualizará en todos lados.
+========================================================================== */
+:root {
+    --bg-color: #0a0414;          /* Fondo oscuro violáceo */
+    --main-purple: #bf00ff;       /* Púrpura neón principal */
+    --cyan-accent: #00f3ff;       /* Cian eléctrico para interacción */
+    --magenta-alert: #ff007f;     /* Magenta para alertas y detalles */
+    --dim-purple: #52307c;        /* Violeta apagado */
+    
+    /* Efectos de resplandor (sombra de texto o cajas) */
+    --glow-purple: 0 0 8px rgba(191, 0, 255, 0.6);
+    --glow-cyan: 0 0 8px rgba(0, 243, 255, 0.6);
+}
+
+/* ==========================================================================
+   RESETEO Y CUERPO (BODY)
+   Limpiamos los márgenes por defecto del navegador y le damos el estilo
+   base a todo el documento.
+========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--main-purple); /* El color de texto por defecto será morado */
+    font-family: 'VT323', monospace; /* La fuente retro que importaste */
+    font-size: 1.2rem;
+    line-height: 1.5;
+    padding: 2rem;
+    text-shadow: var(--glow-purple); /* Resplandor en las letras */
+    max-width: 900px; /* Evita que la página sea demasiado ancha en pantallas grandes */
+    margin: 0 auto; /* Centra el contenido en la pantalla */
+    position: relative;
+}
+
+/* ==========================================================================
+   EFECTO DE MONITOR CRT
+   Conectamos con tu <div class="crt-overlay"></div> del HTML.
+   Le ponemos "position: fixed" para que cubra toda la pantalla siempre.
+========================================================================== */
+.crt-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* Crea líneas horizontales y un efecto de esquinas oscuras (viñeta) */
+    background: linear-gradient(
+        rgba(10, 4, 20, 0) 50%, 
+        rgba(0, 0, 0, 0.35) 50%
+    ), radial-gradient(circle, rgba(0,0,0,0) 50%, rgba(5, 0, 15, 0.7) 100%);
+    background-size: 100% 4px, 100% 100%;
+    pointer-events: none; /* Evita que esta capa bloquee los clics del usuario */
+    z-index: 9999; /* Asegura que esté por encima de todo */
+}
+
+/* ==========================================================================
+   ANIMACIÓN DEL CURSOR
+   Conectamos con tu <span class="cursor">_</span> en el título.
+========================================================================== */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.cursor {
+    color: var(--cyan-accent);
+    animation: blink 1s step-end infinite; /* Hace que parpadee infinitamente */
+}
+
+/* ==========================================================================
+   ENCABEZADOS (h1, h2)
+========================================================================== */
+h1, h2 {
+    font-weight: normal;
+    text-transform: uppercase;
+    color: var(--main-purple);
+    border-bottom: 1px dashed var(--dim-purple); /* Una línea punteada debajo */
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    color: var(--cyan-accent); /* El título principal resalta en cian */
+}
+
+/* ==========================================================================
+   NAVEGACIÓN (MENÚ)
+   Adaptamos el estilo a tu estructura <ul> y <li>.
+========================================================================== */
+nav ul {
+    border: 1px solid var(--main-purple);
+    padding: 1rem;
+    margin-top: 1rem;
+    display: flex; /* Coloca los elementos uno al lado del otro */
+    flex-wrap: wrap;
+    gap: 1.5rem; /* Espacio entre enlaces */
+    background: rgba(191, 0, 255, 0.05);
+    list-style: none; /* Quita los puntitos (viñetas) de tu <li> */
+}
+
+nav a {
+    color: var(--cyan-accent);
+    text-decoration: none; /* Quita el subrayado clásico de los enlaces */
+    text-shadow: var(--glow-cyan);
+    transition: all 0.2s ease;
+}
+
+nav a:hover {
+    background-color: var(--cyan-accent);
+    color: var(--bg-color);
+    text-shadow: none;
+}
+
+/* ==========================================================================
+   SECCIONES Y TARJETAS (ARTICLES)
+========================================================================== */
+section {
+    margin-top: 4rem;
+}
+
+article {
+    border: 1px solid var(--main-purple);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    background: rgba(10, 4, 20, 0.7);
+    box-shadow: inset 0 0 15px rgba(191, 0, 255, 0.15);
+}
+
+/* Decoramos tus textos de "REGISTRO 001" que pusiste dentro de un <div> en las tarjetas */
+article > div:first-of-type {
+    color: var(--magenta-alert);
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed var(--dim-purple);
+    display: inline-block;
+}
+
+/* Conectamos con tus <span class="status-lost"> y status-found */
+.status-lost { color: var(--magenta-alert); text-shadow: 0 0 5px var(--magenta-alert); }
+.status-found { color: #00ff00; text-shadow: 0 0 5px #00ff00; } 
+
+/* Filtro para las imágenes dentro de figure, dándoles aspecto retro */
+figure img {
+    max-width: 100%;
+    border: 1px solid var(--main-purple);
+    filter: grayscale(100%) sepia(100%) hue-rotate(240deg) brightness(1.1);
+    margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+   FORMULARIOS (INPUTS, TEXTAREA, BOTONES)
+========================================================================== */
+form { margin-top: 1rem; }
+
+label {
+    display: block; /* Pone las etiquetas en su propia línea */
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+    color: var(--cyan-accent);
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+    background-color: transparent; /* Fondo transparente */
+    border: 1px solid var(--dim-purple);
+    color: var(--cyan-accent);
+    font-family: 'VT323', monospace; /* Mantienen la fuente retro */
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    width: 100%;
+    text-shadow: var(--glow-cyan);
+    outline: none;
+}
+
+/* Cuando el usuario hace clic para escribir en la caja */
+input[type="text"]:focus,
+textarea:focus {
+    border-color: var(--cyan-accent);
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
+}
+
+fieldset {
+    border: 1px solid var(--main-purple);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+legend {
+    color: var(--main-purple);
+    padding: 0 0.5rem;
+}
+
+/* Estilo general para todos los botones */
+button {
+    background-color: transparent;
+    color: var(--magenta-alert);
+    border: 1px solid var(--magenta-alert);
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    padding: 0.5rem 1.5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.2s;
+}
+
+button:hover {
+    background-color: var(--magenta-alert);
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(255, 0, 127, 0.8);
+}
+
+/* ==========================================================================
+   PREGUNTAS FRECUENTES (DETAILS Y SUMMARY)
+========================================================================== */
+details {
+    border: 1px solid var(--dim-purple);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: rgba(191,0,255,0.02);
+}
+
+summary {
+    cursor: pointer;
+    color: var(--cyan-accent);
+    outline: none;
+}
+
+/* ==========================================================================
+   PIE DE PÁGINA (FOOTER)
+========================================================================== */
+footer {
+    margin-top: 4rem;
+    text-align: center;
+    color: var(--dim-purple);
+}
+
+footer a {
+    color: var(--dim-purple);
+}
