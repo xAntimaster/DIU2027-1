@@ -1,8 +1,4 @@
-/* ==========================================================================
-   VARIABLES DE COLOR (Custom Properties)
-   Esto nos permite guardar colores y reusarlos. Si quieres cambiar el tono
-   del sitio, solo cambias los valores aquí y se actualizará en todos lados.
-========================================================================== */
+/* ========================================================================== VARIABLES DE COLOR ========================================================================== */
 :root {
     --bg-color: #0a0414;          /* Fondo oscuro violáceo */
     --main-purple: #bf00ff;       /* Púrpura neón principal */
@@ -15,11 +11,7 @@
     --glow-cyan: 0 0 8px rgba(0, 243, 255, 0.6);
 }
 
-/* ==========================================================================
-   RESETEO Y CUERPO (BODY)
-   Limpiamos los márgenes por defecto del navegador y le damos el estilo
-   base a todo el documento.
-========================================================================== */
+/* ========================================================================== Limpiar margenes del navegador ========================================================================== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -29,13 +21,13 @@
 body {
     background-color: var(--bg-color);
     color: var(--main-purple); /* El color de texto por defecto será morado */
-    font-family: 'VT323', monospace; /* La fuente retro que importaste */
-    font-size: 1.2rem;
+    font-family: 'VT323', monospace; 
+    font-size: 1.7rem;
     line-height: 1.5;
     padding: 2rem;
     text-shadow: var(--glow-purple); /* Resplandor en las letras */
-    max-width: 900px; /* Evita que la página sea demasiado ancha en pantallas grandes */
-    margin: 0 auto; /* Centra el contenido en la pantalla */
+    max-width: 900px; /* Evitar que la página sea demasiado ancha en pantallas grandes */
+    margin: 0 auto; /* Centrar el contenido en la pantalla */
     position: relative;
 }
 
@@ -75,6 +67,7 @@ h1, h2 {
     border-bottom: 1px dashed var(--dim-purple); /* Una línea punteada debajo */
     padding-bottom: 0.5rem;
     margin-bottom: 1.5rem;
+    
 }
 
 h1 {
