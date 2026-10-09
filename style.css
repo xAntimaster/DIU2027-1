@@ -129,7 +129,7 @@ section {
 .tarjeta-imagen {
     width: 100%;
     height: 200px;
-    object-fit: cover; /* Requisito: object-fit */
+    object-fit: contain; /* Requisito: object-fit */
     border: 1px solid var(--main-purple); /* Requisito: Bordes */
     filter: grayscale(100%) sepia(100%) hue-rotate(240deg) brightness(1.1);
     margin-bottom: 1rem;
