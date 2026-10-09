@@ -136,7 +136,83 @@
         </section>
 
         <!-- ================================ Tercera sección: Subir reporte ================================-->
+         <section id="reportar">
 
+            <h2>> Crear nuevo reporte</h2>
+
+            <form>
+                <!--Tipo de reporte: encontrado o perdido-->
+                <fieldset>
+                    <legend>TIPO:</legend>
+                    <label><input type="radio" name="tipo" value="encontrado"> Encontré un objeto</label>
+                    <label><input type="radio" name="tipo" value="perdido"> Perdí un objeto</label>
+                </fieldset>
+                
+                <div>
+                    <label>Objeto:</label>
+                    <input type="text" placeholder="Ej. mochila, calculadora, termo...">
+                </div>
+                
+                <div>
+                    <div>
+                        <label>Lugar donde se encontró/perdió el objeto:</label>
+                        <input type="text" placeholder="Ej. Bibiloteca central, Facultad de ciencias, Estadio Olímpico...">
+                    </div>
+
+                    <div>
+                        <label>Fecha :</label>
+                        <input type="date" >
+                    </div>
+                </div>
+                
+                <div >
+                    <label>Descripción particular del objeto:</label>
+                    <textarea rows="5"></textarea>
+                </div>
+
+                <!-- NUEVO: Campo para subir evidencia -->
+                <div>
+                    <label>Subir objeto</label>
+                    <div>
+                        <button type="button" class="btn file-btn">[Cargar Evidencia]</button>
+                        <span>Ningún archivo detectado...</span>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn submit-btn">[Subir al Sistema]</button>
+            </form>
+        </section>
+
+        <section id="info-sistema">
+           <h2>> Manual de usuario (FAQ)</h2>
+
+            <details class="terminal-accordion">
+                <summary>> 001: ¿Cómo reclamo un objeto que es mío?</summary>
+                <p>Acude a las coordenadas indicadas en el registro con tu credencial UNAM vigente y una prueba de propiedad (como la contraseña de tu celular o describiendo un detalle no visible en la foto).</p>
+            </details>
+
+            <details class="terminal-accordion">
+                <summary>> 002: ¿Cuánto tiempo guardan los objetos?</summary>
+                <p>El protocolo dicta un resguardo de 30 días hábiles en las oficinas centrales de la facultad correspondiente. Después de eso, se donan o destruyen según su naturaleza.</p>
+            </details>
+
+            <details class="terminal-accordion">
+                <summary>> 003: Encontré una credencial, ¿qué hago?</summary>
+                <p>Para identificaciones oficiales, por seguridad no subas foto de los datos personales. Registra el nombre y entrégala directamente en Servicios Escolares.</p>
+            </details> 
+        </section>
+
+        <footer>
+            <hr>
+            <p>Proyecto de Diseño de Interfaces de Usuario</p>
+            <address>
+                Facultad de Ciencias<br>
+                Universidad Nacional Autónoma de México
+            </address>
+            <p>
+                <a href="https://www.unam.mx" target="_blank">Universidad Nacional Autónoma de México</a>
+            </p>
+        </footer>
 
     </main>
 </body>
