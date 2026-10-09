@@ -24,17 +24,15 @@
         <nav>
 
             <!--Una lista desordenada aplicada a cada uno de sus elementos-->
-            <ul>
+            <ul class="menu-lista">
 
-                <li><a href="#buscar">[ Buscar Objeto ]</a></li>
+                <li><a href="#buscar" class="menu-enlace">[ Buscar Objeto ]</a></li>
 
-                <li><a href="#ultimos-registros">[ últimos Registros ]</a></li>
+                <li><a href="#ultimos-registros" class="menu-enlace">[ Últimos Registros ]</a></li>
 
-                <li><a href="#reportar">[ Levantar Reporte ]</a></li>
+                <li><a href="#reportar" class="menu-enlace">[ Levantar Reporte ]</a></li>
 
-                <li><a href="#info-sistema">[ Info Sistema ]</a></li>
-
-                <li><a href="#faq">[ FAQ ]</a></li>
+                <li><a href="#info-sistema" class="menu-enlace">[ Manual de Usuario ]</a></li>
 
             </ul>
         </nav>
@@ -45,17 +43,17 @@
         <!-- ================================ Primera sección: Buscador ================================-->
         <section id="buscar">
 
-            <h2> >  Busqueda de objetos registrados </h2>
+            <h2> >  Búsqueda de objetos registrados </h2>
 
             <p>Consulta la base de datos de objetos reportados por la comunidad universitaria.</p>
 
-            <div class="search-box">
+            <div class="zona-input">
 
-                <label>Buscar Objeto</label>
+                <label class="etiqueta-terminal">Buscar Objeto</label>
                 
-                <input type="text" placeholder="Ej. mochila, calculadora, termo...">
+                <input type="text" class="input-terminal" placeholder="Ej. mochila, calculadora, termo...">
 
-                <button type="submit"> Ejecutar Búsqueda </button>
+                <button type="submit" class="boton-terminal"> Ejecutar Búsqueda </button>
             </div>
         </section>
 
@@ -66,72 +64,73 @@
 
             <h2> > Últimos registros </h2>
             
-            <div>
+            <div class="grid-objetos">
+
                 <!-- Objeto 1 (Extraviado) -->
-                <article >
+                <article class="tarjeta-registro">
 
                     <!--Primera imagen anexada-->
                     <figure>
-                        <img src="imagenes/" alt="Audífonos negros con blanco" width="300" onerror="this.onerror=null; this.src='https://placehold.co/300x200/0a0414/bf00ff?text=IMG_AUDIFONOS.JPG';">
+                        <img src="imagenes/" class="tarjeta-imagen" alt="Audífonos negros con blanco" width="300" onerror="this.onerror=null; this.src='https://placehold.co/300x200/0a0414/bf00ff?text=IMG_AUDIFONOS.JPG';">
                     </figure>
 
 
-                    <div > > REGISTRO 001 </div>
+                    <div class="tarjeta-titulo"> > REGISTRO 001 </div>
                     
                     <p><strong>Objeto:</strong> Audífonos</p>
-                    <p><strong>Estatus:</strong> <span class="status-lost">EXTRAVIADO</span></p>
+                    <p><strong>Estatus:</strong> <span class="estatus-perdido">EXTRAVIADO</span></p>
                     <p><strong>Encontrado/Perdido en:</strong>Las Islas</p>
                     <p><strong>Características:</strong> Tiene una estampa de conejito en la parte de abajo.</p>
                     
                     <!--Botón que simula ver más detalles del objeto-->
-                    <button type="submit">[ VER DETALLES ]</button>
+                    <button type="submit" class="boton-terminal"> VER DETALLES </button>
 
                 </article>
 
                 <!-- Objeto 2 (Encontrado) -->
-                <article class="card found">
+                <article class="tarjeta-registro found">
 
                     <!--Primera imagen anexada-->
                     <figure>
-                        <img src="imagenes/" alt="Cartela de tela" width="300" onerror="this.onerror=null; this.src='https://placehold.co/300x200/0a0414/bf00ff?text=IMG_CARTERA.JPG';">
+                        <img src="imagenes/" class="tarjeta-imagen" alt="Cartera de tela" width="300" onerror="this.onerror=null; this.src='https://placehold.co/300x200/0a0414/bf00ff?text=IMG_CARTERA.JPG';">
                     </figure>
 
-                    <div > > REGISTRO 002 </div>
+                    <div class="tarjeta-titulo"> > REGISTRO 002 </div>
 
                     <p><strong>Objeto:</strong> Cartera</p>
-                    <p><strong>Estatus:</strong> <span class="status-found">ENCONTRADO</span></p>
+                    <p><strong>Estatus:</strong> <span class="estatus-encontrado">ENCONTRADO</span></p>
                     <p><strong>Encontrado/Perdido en:</strong> Biblioteca Central</p>
                     <p><strong>Características:</strong> Tiene todas las credenciales y dinero intacto.</p>
                     
                     <!--Botón que simula ver más detalles del objeto-->
-                    <button type="submit">[ VER DETALLES ]</button>
+                    <button type="submit" class="boton-terminal">[ VER DETALLES ]</button>
 
                 </article>
 
                 <!-- Objeto 3 (Extraviado) -->
-                <article>
+                <article class="tarjeta-registro">
 
                     <!--Primera imagen anexada-->
                     <figure>
-                        <img src="imagenes/" alt="Termo color verde" width="300" onerror="this.onerror=null; this.src='https://placehold.co/300x200/0a0414/bf00ff?text=IMG_TERMO.JPG';">
+                        <img src="imagenes/" class="tarjeta-imagen" alt="Termo color verde" width="300" onerror="this.onerror=null; this.src='https://placehold.co/300x200/0a0414/bf00ff?text=IMG_TERMO.JPG';">
                     </figure>
 
-                    <div> > REGISTRO 003 </div>
+                    <div class="tarjeta-titulo"> > REGISTRO 003 </div>
 
                     <p><strong>Objeto:</strong> Termo</p>
-                    <p><strong>Estatus:</strong> <span class="status-lost">EXTRAVIADO</span></p>
+                    <p><strong>Estatus:</strong> <span class="estatus-perdido">EXTRAVIADO</span></p>
                     <p><strong>Encontrado/Perdido en:</strong> Campos de practica</p>
                     <p><strong>Características:</strong> Tiene un golpe de lado izquierdo.</p>
 
                     <!--Botón que simula ver más detalles del objeto-->
-                    <button class="btn">[ VER DETALLES ]</button>
+                    <button type="button" class="boton-terminal">[ VER DETALLES ]</button>
 
                 </article>
             </div>
             
             <!--Botón de "ver más"-->
-            <div>
-                <button type="submit"> > Cargar más registros </button>
+            <div style="margin-top: 2rem; text-align: center;">
+                <button type="button" class="boton-terminal"> > Cargar más registros </button>
             </div>
         </section>
 
@@ -142,74 +141,74 @@
 
             <form>
                 <!--Tipo de reporte: encontrado o perdido-->
-                <fieldset>
-                    <legend>TIPO:</legend>
-                    <label><input type="radio" name="tipo" value="encontrado"> Encontré un objeto</label>
-                    <label><input type="radio" name="tipo" value="perdido"> Perdí un objeto</label>
+                <fieldset class="caja-agrupada">
+                    <legend class="leyenda-terminal">TIPO:</legend>
+                    <label class="etiqueta-terminal"><input type="radio" name="tipo" value="encontrado"> Encontré un objeto</label>
+                    <label class="etiqueta-terminal"><input type="radio" name="tipo" value="perdido"> Perdí un objeto</label>
                 </fieldset>
                 
                 <div>
-                    <label>Objeto:</label>
-                    <input type="text" placeholder="Ej. mochila, calculadora, termo...">
+                    <label class="etiqueta-terminal">Objeto:</label>
+                    <input type="text" class="input-terminal" placeholder="Ej. mochila, calculadora, termo...">
                 </div>
                 
                 <div>
                     <div>
-                        <label>Lugar donde se encontró/perdió el objeto:</label>
-                        <input type="text" placeholder="Ej. Bibiloteca central, Facultad de ciencias, Estadio Olímpico...">
+                        <label class="etiqueta-terminal">Lugar donde se encontró/perdió el objeto:</label>
+                        <input type="text" class="input-terminal" placeholder="Ej. Biblioteca central, Facultad de ciencias, Estadio Olímpico...">
                     </div>
 
                     <div>
-                        <label>Fecha :</label>
-                        <input type="date" >
+                        <label class="etiqueta-terminal">Fecha :</label>
+                        <input type="date" class="input-terminal">
                     </div>
                 </div>
                 
                 <div >
-                    <label>Descripción particular del objeto:</label>
-                    <textarea rows="5"></textarea>
+                    <label class="etiqueta-terminal">Descripción particular del objeto:</label>
+                    <textarea rows="5" class="input-terminal"></textarea>
                 </div>
 
                 <!-- NUEVO: Campo para subir evidencia -->
                 <div>
-                    <label>Subir objeto</label>
+                    <label class="etiqueta-terminal">Subir objeto</label>
                     <div>
-                        <button type="button" class="btn file-btn">[Cargar Evidencia]</button>
+                        <button type="button" class="boton-terminal">[Cargar Evidencia]</button>
                         <span>Ningún archivo detectado...</span>
                     </div>
                 </div>
                 
-                <button type="submit" class="btn submit-btn">[Subir al Sistema]</button>
+                <button type="submit" class="boton-terminal">[Subir al Sistema]</button>
             </form>
         </section>
 
         <section id="info-sistema">
            <h2>> Manual de usuario (FAQ)</h2>
 
-            <details class="terminal-accordion">
-                <summary>> 001: ¿Cómo reclamo un objeto que es mío?</summary>
+            <details class="acordeon-terminal">
+                <summary class="acordeon-titulo">> 001: ¿Cómo reclamo un objeto que es mío?</summary>
                 <p>Acude a las coordenadas indicadas en el registro con tu credencial UNAM vigente y una prueba de propiedad (como la contraseña de tu celular o describiendo un detalle no visible en la foto).</p>
             </details>
 
-            <details class="terminal-accordion">
+            <details class="acordeon-terminal">
                 <summary>> 002: ¿Cuánto tiempo guardan los objetos?</summary>
                 <p>El protocolo dicta un resguardo de 30 días hábiles en las oficinas centrales de la facultad correspondiente. Después de eso, se donan o destruyen según su naturaleza.</p>
             </details>
 
-            <details class="terminal-accordion">
+            <details class="acordeon-terminal">
                 <summary>> 003: Encontré una credencial, ¿qué hago?</summary>
                 <p>Para identificaciones oficiales, por seguridad no subas foto de los datos personales. Registra el nombre y entrégala directamente en Servicios Escolares.</p>
             </details> 
         </section>
 
         <footer>
-            <hr>
+            <hr class="linea-divisoria">
             <p>Diseño de Interfaces de Usuario</p>
             <address>
                 Facultad de Ciencias<br>
             </address>
             <p>
-                <a href="https://www.unam.mx" target="_blank">Universidad Nacional Autónoma de México</a>
+                <a href="https://www.unam.mx" target="_blank" class="enlace-footer">Universidad Nacional Autónoma de México</a>
             </p>
         </footer>
 
